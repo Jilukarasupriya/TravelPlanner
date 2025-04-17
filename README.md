@@ -16,29 +16,32 @@ and get optimized routes with distance, time, and cost estimations.
 
 ## Installation & Running
 1. Clone the repository:
-   bash
+   ```bash
    git clone <repository-url>
    cd <repository-directory>
+   ```
    
-2. Install Node.js dependencies:
-   bash
+3. Install Node.js dependencies:
+   ```bash
    npm install
+   ```
    
-3. Build the C++ planner and start the server:
-   bash
+4. Build the C++ planner and start the server:
+   ```bash
    npm start
+   ```
    
    This runs the build script (g++ -std=c++17 travelPlanner.cpp -o travelPlanner) and then starts the server.
-4. Open your browser and navigate to:
-   
+5. Open your browser and navigate to:
+   ```
    http://localhost:3000
-   
+   ```
 
 Alternatively, you can build and run manually:
-bash
+```bash
 make           # Build the C++ executable via Makefile
 node server.js # Start the Express server
-
+```
 
 ## Usage
 - Enter a starting city and destination
