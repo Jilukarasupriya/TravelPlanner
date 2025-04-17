@@ -40,22 +40,6 @@ make           # Build the C++ executable via Makefile
 node server.js # Start the Express server
 
 
-## Project Structure
-
-├── frontend/             # Static frontend assets
-│   ├── index.html        # Main HTML page
-│   ├── script.js         # Frontend JavaScript logic
-│   └── styles.css        # CSS styles
-├── cities.csv            # City data (country,city,latitude,longitude)
-├── routes.csv            # Sample travel routes (unused in current version)
-├── travelPlanner.cpp     # C++ core implementing route finding
-├── Makefile              # Build script for the C++ program
-├── server.js             # Node.js Express server
-├── package.json          # Node.js project metadata and scripts
-├── package-lock.json     # Exact dependency versions
-└── .gitignore            # Files and directories to ignore
-
-
 ## Usage
 - Enter a starting city and destination
 - Specify the number of stops (0 for direct route)
