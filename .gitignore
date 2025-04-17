@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# C++ build artifacts
+travelPlanner
+*.o
+*.exe
+*.out
+
+# Editor directories and files
+.idea/
+.vscode/
+
+# OS files
+.DS_Store

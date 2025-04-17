@@ -1,0 +1,16 @@
+{
+  "name": "travel-planner",
+  "version": "1.0.0",
+  "description": "A web interface for a C++ travel planner",
+  "main": "server.js",
+  "scripts": {
+    "build": "g++ -std=c++17 travelPlanner.cpp -o travelPlanner",
+    "start": "npm run build && node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "author": "",
+  "license": "ISC"
+}

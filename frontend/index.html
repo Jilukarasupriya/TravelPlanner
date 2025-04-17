@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Travel Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Global Travel Planner</h1>
+            <p class="tagline">Plan your multi-city journey with ease</p>
+        </header>
+
+        <div class="highlights">
+            <div class="highlight-card">
+                <i class="fas fa-map-marked-alt highlight-icon"></i>
+                <div class="highlight-title">Route Planning</div>
+                <div class="highlight-text">Find the most efficient path between cities</div>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-plane highlight-icon"></i>
+                <div class="highlight-title">Multi-Modal</div>
+                <div class="highlight-text">Combine flights, trains, buses, and cars</div>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-calculator highlight-icon"></i>
+                <div class="highlight-title">Cost Estimation</div>
+                <div class="highlight-text">Get distance, time, and price estimates</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="form-section">
+                <div class="card">
+                    <h2><i class="fas fa-route"></i> Plan Your Trip</h2>
+                    <form id="trip-form">
+                        <div class="form-group">
+                            <label for="start-city">Starting Point</label>
+                            <input type="text" id="start-city" placeholder="e.g., Tokyo, Japan" list="cities" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="end-city">Final Destination</label>
+                            <input type="text" id="end-city" placeholder="e.g., London, UK" list="cities" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="num-stops">Number of Stops</label>
+                            <input type="number" id="num-stops" min="0" value="0" required>
+                        </div>
+
+                        <div id="stops-container" class="stops-container"></div>
+
+                        <div class="add-stop-container">
+                            <button type="button" id="add-stop-btn" class="btn btn-success add-stop-btn">
+                                <i class="fas fa-plus"></i> Add Another Stop
+                            </button>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-search"></i> Plan Trip
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="card">
+                    <h2><i class="fas fa-map"></i> Travel Itinerary</h2>
+                    
+                    <div id="loading" class="spinner-container hidden">
+                        <div class="spinner"></div>
+                    </div>
+                    
+                    <div id="error-message" class="error-message hidden">
+                        An error occurred while planning your trip. Please try again.
+                    </div>
+                    
+                    <div id="empty-state" class="empty-state">
+                        <i class="fas fa-paper-plane"></i>
+                        <p>Enter your trip details and click "Plan Trip" to see your itinerary</p>
+                    </div>
+                    
+                    <div id="results" class="hidden">
+                        <div class="results-table-wrapper">
+                            <table class="results-table">
+                                <thead>
+                                    <tr>
+                                        <th>From</th>
+                                        <th>To</th>
+                                        <th>Mode</th>
+                                        <th>Distance (km)</th>
+                                        <th>Time (hrs)</th>
+                                        <th>Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="results-body">
+                                    <!-- Results will be added here -->
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="results-summary" id="results-summary">
+                            <!-- Summary will be added here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Global Travel Planner | All rights reserved</p>
+    </footer>
+
+    <datalist id="cities">
+        <!-- Cities will be loaded here from cities.csv -->
+    </datalist>
+
+    <script src="script.js"></script>
+</body>
+</html>
